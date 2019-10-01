@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/confluence-admin-panel/static/css/main.6dff8744.chunk.css",
+    "main.js": "/confluence-admin-panel/static/js/main.c589f5e6.chunk.js",
+    "main.js.map": "/confluence-admin-panel/static/js/main.c589f5e6.chunk.js.map",
+    "runtime~main.js": "/confluence-admin-panel/static/js/runtime~main.dffd56be.js",
+    "runtime~main.js.map": "/confluence-admin-panel/static/js/runtime~main.dffd56be.js.map",
+    "static/js/2.47158157.chunk.js": "/confluence-admin-panel/static/js/2.47158157.chunk.js",
+    "static/js/2.47158157.chunk.js.map": "/confluence-admin-panel/static/js/2.47158157.chunk.js.map",
+    "index.html": "/confluence-admin-panel/index.html",
+    "precache-manifest.98ed483ba1a1b6ff7c116b3f575aed24.js": "/confluence-admin-panel/precache-manifest.98ed483ba1a1b6ff7c116b3f575aed24.js",
+    "service-worker.js": "/confluence-admin-panel/service-worker.js",
+    "static/css/main.6dff8744.chunk.css.map": "/confluence-admin-panel/static/css/main.6dff8744.chunk.css.map"
+  }
+}
