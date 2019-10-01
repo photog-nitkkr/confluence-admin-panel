@@ -32,12 +32,12 @@ class Update_event extends Component{
         this.setState({
             category:e.target.value
         })
-        axios.get('https://us-central1-confluence19.cloudfunctions.net/api/events?category='+e.target.value)
+        axios.get('https://confluence-backend.appspot.com/api/events/desc/?category='+e.target.value)
             .then(res=>{
                     this.setState({
-                        total:res.data.data.events  
+                        total:res.data.data[0].events  
                     });
-                    console.log(res.data.data.events);
+                    console.log(res.data.data[0].events);
             });
         
     })
@@ -62,8 +62,9 @@ class Update_event extends Component{
     handlechangeofevents=(e=>{
         let id=e.target.value;
         let eve=this.state.total[id];
+        console.log(eve.name);
         this.setState({
-            name:eve.eventName,
+            name:eve.name,
             rules:[...eve.rules],
             description:eve.description,
             starttime:eve.starttime,
@@ -127,7 +128,7 @@ class Update_event extends Component{
     render()
     {
 
-        let category=["photography", "dance", "music", "dramatics", "informals", "arts","literary","oratory", "quizzing", "hiking and trekking", "audio visual", "lifestyle"];
+        let category=["Photography", "Dance", "Music", "Dramatics", "Informals", "Arts","Literary","Oratory", "Quizzing", "Hiking and Trekking", "Audio Visual", "Lifestyle"];
 
         let events=category.map((eve, idx)=>{
             return(
@@ -139,8 +140,9 @@ class Update_event extends Component{
         let event_name=(this.state.total.length)?
                 (
                     this.state.total.map((eve, index)=>{
+                        console.log(eve.name)
                         return(
-                            <option value={index}>{eve.eventName}</option>
+                            <option value={index}>{eve.name}</option>
                         );                             
                     })
                     
